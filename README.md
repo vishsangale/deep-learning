@@ -1,4 +1,4 @@
-# Deep learning Projects
+# Deep Learning Projects
 
 ## 1. Identify nerve structures in ultrasound images of the neck - Kaggle Competition ##
 
