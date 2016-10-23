@@ -38,9 +38,8 @@ if __name__ == '__main__':
 
     net = ConvolutionNet((1, img_rows, img_cols), dice_coefficient_loss, [dice_coefficient])
     model = net.get_model()
-    file_path = "weights-improvement-{epoch:02d}-{val_loss:.2f}.hdf5"
 
-    model_checkpoint = ModelCheckpoint(file_path, monitor='val_loss', save_best_only=True, mode='auto')
+    model_checkpoint = ModelCheckpoint('unet.hdf5', monitor='val_loss', save_best_only=True, mode='auto')
 
     model.fit(images_train, images_mask_train, batch_size=32, nb_epoch=20, verbose=1, shuffle=True, validation_split=0.1,
               callbacks=[model_checkpoint])
