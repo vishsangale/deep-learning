@@ -14,6 +14,16 @@ VALIDATION_SIZE = 4998
 
 TESTING_SIZE = 12500
 
+FEATURES_TEST_NPY = 'bottleneck_features_test.npy'
+FEATURES_VALIDATION_NPY = 'bottleneck_features_validation.npy'
+FEATURES_TRAIN_NPY = 'bottleneck_features_train.npy'
+NUMBER_OF_EPOCHS = 20
+BATCH_SIZE = 32
+NUMBER_OF_CLASSES = 2
+TOP_MODEL_WEIGHTS_PATH = 'fc_model.h5'
+use_generator = True
+use_pre_trained = True
+
 
 def read_image(file_path):
     img = imread(file_path, mode='RGB')
@@ -63,3 +73,5 @@ def read_training_data(x_file, y_file):
     if not os.path.isfile('X_train.npy') or not os.path.isfile('y_train.npy'):
         extract_train_data(TRAIN_DIR)
     return np.load(x_file), np.load(y_file)
+
+

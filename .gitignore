@@ -92,6 +92,8 @@ ENV/
 datasets/
 *.npy
 *.hdf5
+*.h5
+weights/
 
 # pycharm project files
 .idea/
