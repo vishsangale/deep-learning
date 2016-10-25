@@ -1,11 +1,12 @@
 import os
-
+import matplotlib.pyplot as plt
 from keras.callbacks import EarlyStopping, Callback
 from keras.layers import Flatten, Dense, Dropout
 from keras.models import Sequential
 from keras.optimizers import SGD, RMSprop
 from keras.preprocessing.image import ImageDataGenerator
 from keras.regularizers import l2
+from keras.utils.visualize_util import plot
 
 from ConvNet import ConvolutionNet
 from Postprocess import create_output_file
@@ -31,6 +32,16 @@ def add_top_model(model):
     top_model.add(Dropout(0.5))
     top_model.add(Dense(1, activation='sigmoid'))
     return top_model
+
+
+def show_graph(history):
+    plt.plot(history.losses)
+    plt.plot(history.val_losses)
+    plt.title('model loss')
+    plt.ylabel('loss')
+    plt.xlabel('epoch')
+    plt.legend(['train', 'validation'], loc='upper left')
+    plt.show()
 
 
 if __name__ == '__main__':
@@ -134,3 +145,6 @@ if __name__ == '__main__':
     y_predict = model.predict(X_test, verbose=1)
 
     create_output_file(y_predict)
+    show_graph(history)
+
+    plot(model, to_file='model.png', show_shapes=True)

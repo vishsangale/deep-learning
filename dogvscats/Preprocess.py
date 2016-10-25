@@ -22,7 +22,7 @@ BATCH_SIZE = 32
 NUMBER_OF_CLASSES = 2
 TOP_MODEL_WEIGHTS_PATH = 'fc_model.h5'
 use_generator = True
-use_pre_trained = True
+use_pre_trained = False
 
 
 def read_image(file_path):
