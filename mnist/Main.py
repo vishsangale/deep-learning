@@ -3,6 +3,7 @@ from keras.callbacks import Callback, EarlyStopping
 from keras.datasets import mnist
 from keras.optimizers import Adam
 from keras.utils import np_utils
+from keras.utils.visualize_util import plot
 
 from Config import IMG_ROWS, IMG_COLS, NUMBER_OF_CLASSES, NUMBER_OF_EPOCHS, BATCH_SIZE
 from ConvNet import ConvolutionalNet
@@ -83,3 +84,5 @@ if __name__ == "__main__":
     print('Test accuracy:', score[1])
 
     show_graph(history)
+
+    plot(model, to_file='model.png',show_shapes=True)
