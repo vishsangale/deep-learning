@@ -2,7 +2,7 @@
 
 ## 1. Identify nerve structures in ultrasound images of the neck - Kaggle Competition ##
 
-In this project, nurve structures in a dataset of ultrasound images of the neck were correctly identified to effectively insert a patient’s pain management catheter. Convolution Neural nertwork is implemented in Keras. Simple [U-Net Architecture](https://arxiv.org/pdf/1505.04597.pdf) is used as a base architecture and it was fine tuned according to the performance on the training data. Training data consists of images where the nerve has been manually annotated by humans. Perfornance of the model is evaluated using the mean [Dice coefficient](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient)
+In this project, nerve structures in a dataset of ultrasound images of the neck were correctly identified to effectively insert a patient’s pain management catheter. Convolution Neural network is implemented in Keras. Simple [U-Net Architecture](https://arxiv.org/pdf/1505.04597.pdf) is used as a base architecture and it was fine tuned according to the performance on the training data. Training data consists of images where the nerve has been manually annotated by humans. Perfornance of the model is evaluated using the mean [Dice coefficient](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient)
 
 ## 2. Distinguish images of dogs from cats - Kaggle Competition ##
 
