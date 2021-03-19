@@ -19,6 +19,3 @@ class MatchingGCN(nn.Module):
         x = self.conv2(x, inp.edge_index)
         x = self.linear(x)
         return x
-
-
-
